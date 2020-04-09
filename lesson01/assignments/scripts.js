@@ -1,12 +1,12 @@
 // jQuery Doc Ready
 $(function () {
     // Set up some data and variables
-    const data = [1, 2, 3, 4],
+    const data = [5, 10, 15, 20, 25],
         input = $('.input'),
         submit = $('.submit'),
         resultSum = $('.sum');
     // Click event on the submit input
-    submit.on('click', function () {
+    $(".submit").click(function() {
         // Grab the input value and parse it into a number
         const val = input.val();
         const num = parseInt(val);
@@ -26,12 +26,12 @@ $(function () {
 
 $(function () {
     // Set up some data and variables
-    const data = [10, 15, 20, 25, 50, 65, 200],
+    const data = [5, 10, 15, 20, 25],
         input = $('.input2'),
         submit = $('.submit2'),
         resultSum = $('.sum2');
     // Click event on the submit input
-    submit.on('click', function () {
+    $(".submit").click(function() {
         // Grab the input value and parse it into a number
         const val = input.val();
         const num = parseInt(val);
@@ -51,12 +51,12 @@ $(function () {
 
 $(function () {
     // Set up some data and variables
-    const data = [2, 4, 6, 8],
+    const data = [5, 10, 15, 20, 25],
         input = $('.input3'),
         submit = $('.submit3'),
         resultSum = $('.sum3');
     // Click event on the submit input
-    submit.on('click', function () {
+    $(".submit").click(function() {
         // Grab the input value and parse it into a number
         const val = input.val();
         const num = parseInt(val);
@@ -76,12 +76,12 @@ $(function () {
 
 $(function () {
     // Set up some data and variables
-    const data = [2, 4, 6, 8],
+    const data = [5, 10, 15, 20, 25],
         input = $('.input4'),
         submit = $('.submit4'),
         resultSum = $('.sum4');
     // Click event on the submit input
-    submit.on('click', function () {
+    $(".submit").click(function() {
         // Grab the input value and parse it into a number
         const val = input.val();
         const num = parseInt(val);
