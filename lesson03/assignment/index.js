@@ -1,3 +1,4 @@
+//create function to run json objects
 function getCard(identity) {
   let Card = `
     <article class="flex-container">
@@ -19,6 +20,7 @@ function getCard(identity) {
   return Card;
 }
 
+//run loop over all objects
 const demo = employees.map(function(getCard){
   let Card = `<article class="flex-container">
       <div>
@@ -39,48 +41,6 @@ const demo = employees.map(function(getCard){
     return Card;
   });
 
+//append objects to HTML
 // document.getElementById("demo").innerHTML = employees.map(getCard);
 $(".test").append(demo);
-
-// cards.map(function(identity){
-//   let card = `
-//     <article class="flex-container card">
-//       <div>
-//          <h1 class="card_name">${identity.name}</h1>
-//          <h2 class="card_jobTitle">${identity.jobTitle}</h2>
-//       </div>
-//       <div class="details">
-//          <p class="card_company">${identity.company}</p>
-//          <p class="card_experience">${identity.experience}</p>
-//          <p class="card_school">${identity.school}</p>
-//          <p class="card_major">${identity.major}</p>
-//          <p class="card_email">${identity.email}</p>
-//          <p><img src="img/linkedin.svg" alt="linkedin logo" class="card_linkedInUrl"> ${identity.linkedInUrl}</p>
-//       </div>
-//     </article>
-//   `;
-//   return identity;
-// });
-//
-// // loop through the data
-// const cardsHTML = cards.map(function(identity){
-//   let card = `<article class="flex-container card">
-//       <div>
-//          <h1 class="card_name">${identity.name}</h1>
-//          <h2 class="card_jobTitle">${identity.jobTitle}</h2>
-//       </div>
-//       <div class="details">
-//          <p class="card_company">${identity.company}</p>
-//          <p class="card_experience">${identity.experience}</p>
-//          <p class="card_school">${identity.school}</p>
-//          <p class="card_major">${identity.major}</p>
-//          <p class="card_email">${identity.email}</p>
-//          <p><img src="img/linkedin.svg" alt="linkedin logo" class="card_linkedInUrl"> ${identity.linkedInUrl}</p>
-//       </div>
-//     </article>
-//     `;
-//     return identity;
-//   });
-//
-// //use append() to add the generated code to the .card section
-// $(".card").append(cardsHTML);
