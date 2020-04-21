@@ -3,7 +3,8 @@
 .details {
   padding: 2rem;
   margin-left: 3rem;
-  border-style: none;
+  border-style: solid;
+  border-color: $cardBlue;
   background-color: lighten($black, 90%);
   flex-grow: 1;
 }

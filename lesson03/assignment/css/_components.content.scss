@@ -39,6 +39,7 @@ html {
 
 .headshot {
   border-radius: 50%;
+  max-width: 30rem;
   align-items: center;
 }
 
@@ -57,7 +58,7 @@ p {
   margin-top: 2.5rem;
   color: lighten($black, 50%);
     &:hover {
-      color: $purple;
+      color: $cardBlue;
     }
 }
 
