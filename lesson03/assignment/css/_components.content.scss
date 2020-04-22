@@ -48,7 +48,7 @@ h1, h2 {
     color: lighten($black, 50%);
     text-align: center;
       &:hover {
-        color: $red;
+        color: $cardBlue;
     };
 }
 
@@ -73,12 +73,26 @@ p {
 
 //this mixin transforms the headshot by adding a drop shadow
 @mixin transform {
-  padding: 50px;
+  padding: .25rem;
   transition: transform .2s;
   margin: 0 auto;
     &:hover {
       box-shadow: 10px 10px 50px gray;
     };
+}
+
+@mixin white {
+  background-color: lighten($black,90%);
+    &:hover {
+      background-color: $white;
+      border-style: solid;
+      border-color: lighten($black,90%);
+      border-width: 1rem;
+    };
+}
+
+#water {
+  @include white;
 }
 
 #surprise {
