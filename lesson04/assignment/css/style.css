@@ -353,16 +353,11 @@ td,
 th {
   padding: 0; }
 
-.body {
-  color: #333;
-  font-family: 'Oswald', Arial, sans-serif;
-  font-size: 13px; }
-
 .main {
   padding: 2rem;
   border-width: 3rem;
   border-color: #f6f5f6;
-  font-family: Gill Sans,sans-serif; }
+  font-family: Gill Sans, sans-serif; }
 
 .view {
   margin: 10px;
@@ -386,7 +381,7 @@ th {
 
 .view h2 {
   text-transform: uppercase;
-  color: #fff;
+  color: #ffffff;
   font-size: 17px;
   padding: 10px; }
 
