@@ -92,13 +92,18 @@
     box-shadow: 0 0 5px #000
 } */
 
+@mixin slide {
+  transform: translateX(600px);
+}
+
 .view-fifth img {
 	transition: all 0.3s ease-in-out;
 }
 
 .view-slide .mask {
 	background-color: rgba(0,0,0,0.3);
-	transform: translateX(-600px);
+	// transform: translateX(-600px);
+  @include slide;
 	opacity: 1;
 	transition: all 0.4s ease-in-out;
 }
@@ -132,16 +137,14 @@
 .view-slide:hover .mask {
 	transform: translateX(0px);
 }
+
 .view-slide:hover img {
   @include slide;
   /* transform: translateX(600px); */
 	transition-delay: 0.1s;
 }
+
 .view-slide:hover p{
     opacity: 1;
     transition-delay: 0.4s;
-}
-
-@mixin slide {
-  transform: translateX(600px);
 }
