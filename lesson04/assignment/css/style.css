@@ -1,0 +1,146 @@
+.body {
+  color: #333;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 13px;
+}
+
+.main {
+    padding: 2rem;
+    border-width: 3rem;
+    border-color: #f6f5f6;
+    font-family: Gill Sans,sans-serif;
+}
+.view {
+    /* width: 300px;
+    height: 200px; */
+    margin: 10px;
+    float: left;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 2px 2px 4px #e6e6e6;
+    cursor: default;
+    background: #fff url(images/unsplash-headshot.jpg) no-repeat center center
+    /* background: #fff url(images/unsplash-headshot.jpg) no-repeat center center */
+}
+.view .mask, .view .content {
+    width: 450px;
+    height: 440px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.view img {
+    display: block;
+    position: relative
+}
+
+.view div {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 20px 0 20px 0
+
+}
+
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    /* text-align: center; */
+    /* position: relative; */
+    font-size: 17px;
+    padding: 20px;
+    /* background: rgba(0, 0, 0, 0.8); */
+    /* margin: 20px 0 0 0 */
+}
+.view h3 {
+    color: #fff;
+    font-family: Georgia, serif;
+    font-style: italic;
+    /* text-align: center; */
+    /* position: relative; */
+    font-size: 14px;
+    /* padding: 10px; */
+    /* background: rgba(0, 0, 0, 0.8); */
+    /* margin: 20px 0 0 0 */
+}
+
+.view p {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    /* position: relative; */
+    color: #fff;
+    margin: 30px;
+    /* padding: 10px; */
+    /* text-align: center */
+}
+/* .view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+} */
+/* .view a.info:hover {
+    box-shadow: 0 0 5px #000
+} */
+
+.view-fifth img {
+	transition: all 0.3s ease-in-out;
+}
+
+.view-slide .mask {
+	background-color: rgba(0,0,0,0.3);
+	transform: translateX(-600px);
+	opacity: 1;
+	transition: all 0.4s ease-in-out;
+}
+
+.view-slide div {
+  /* background: rgba(255, 255, 255, 0.5); */
+  color: #000;
+  box-shadow: 0px 1px 3px rgba(159, 141, 140, 0.5);
+
+}
+
+/* .view-fifth h2{
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+    box-shadow: 0px 1px 3px rgba(159, 141, 140, 0.5);
+} */
+
+/* .view-fifth h3{
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+    box-shadow: 0px 1px 3px rgba(159, 141, 140, 0.5);
+} */
+
+.view-slide p{
+    opacity: 0;
+    /* background: rgba(255, 255, 255, 0.5); */
+    /* color: #333; */
+    transition: all 0.2s linear;
+}
+
+.view-slide:hover .mask {
+	transform: translateX(0px);
+}
+.view-slide:hover img {
+	transform: translateX(600px);
+	transition-delay: 0.1s;
+}
+.view-slide:hover p{
+    opacity: 1;
+    transition-delay: 0.4s;
+}
+
+@mixin slide {
+  transform: translateX(600px);
+}
