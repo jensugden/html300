@@ -10,16 +10,19 @@ html {
     box-sizing: inherit;
 }
 
+//applied commonly used items as a Mixin
 @mixin standard {
   display: flex;
   padding: 3rem;
   justify-content: center;
 }
 
+//padding for full site
 main {
     padding: $padding;
 }
 
+//grid code with BEM styling for the sidebar and article
 .container {
   display: grid;
   grid-template-columns: 33% 1fr;
