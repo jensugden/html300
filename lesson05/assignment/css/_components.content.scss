@@ -1,5 +1,7 @@
 html {
     box-sizing: border-box;
+    color: white;
+    font-family: $font;
 }
 
 *,
@@ -8,6 +10,57 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+//applied commonly used items as a Mixin
+@mixin standard {
+  display: flex;
+  padding: 3rem;
+  justify-content: center;
+}
+
+//padding for full site
+main {
+    padding: $padding;
+}
+
+//grid code with BEM styling for the sidebar and article
+.container {
+  display: grid;
+  grid-template-columns: 33% 1fr;
+  grid-template-rows: auto;
+  &__side {
+    background-color: $purple;
+    padding: $padding;
+  }
+  &__article {
+    background-color: $orange;
+    padding: $padding;
+  }
+}
+
+header {
+  background-color: $red;
+  @include standard;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: $green;
+  padding: $padding;
+  margin: 0;
+}
+
+p {
+  font-family: $serif;
+}
+
+li {
+  list-style: none;
+}
+
+footer {
+  background-color: $navy;
+  @include standard;
 }
