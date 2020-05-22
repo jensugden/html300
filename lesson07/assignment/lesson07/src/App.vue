@@ -19,7 +19,7 @@
     </div>
     <router-view></router-view>
 
-    <landing/>
+    <!-- <landing/> -->
 
     <footer class="bg-info mt-2 p-5">
       <h6>Thank you for visiting ArtSearch</h6>
@@ -30,14 +30,15 @@
 </template>
 
 <script>
-import landing from './components/landing.vue'
+// import landing from './components/landing.vue'
 
 export default {
   name: 'app',
-  components: {
-    landing
-  }
+  // components: {
+  //   landing
+  // }
 }
+
 </script>
 
 <style>
