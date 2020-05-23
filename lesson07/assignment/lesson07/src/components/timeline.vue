@@ -46,16 +46,18 @@
 export default {
   name: 'timeline',
   data () {
-    persons:[
-      {name: 'jenny', age: '45', color: 'yellow'},
-      {name: 'jones', age: '43', color: 'blue'}
-    ]
+    return {
+      persons:[
+        {name: 'jenny', age: '45', color: 'yellow'},
+        {name: 'jones', age: '43', color: 'blue'}
+      ],
     // return {
     //   eras: [
     //     {year: '1400-1600', genre: 'Renaissance', descrip: 'Natural elements, individualism, realism, attention-to-detail, precision of human anatomy'},
     //     {year: '1527-1580', genre: 'Mannerism', descrip: 'Stylized features, exaggerated details, decorative elements'}
     //   ]
     // }
+  }
   }
 }
 
