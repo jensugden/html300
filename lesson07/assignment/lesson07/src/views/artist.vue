@@ -1,5 +1,18 @@
 <template>
-  <div class="timeline">
-    <h1>Artists</h1>
+  <div>
+    <accordion/>
+
   </div>
 </template>
+
+<script>
+import accordion from '../components/accordion.vue'
+
+export default {
+  name: 'app',
+  components: {
+    accordion
+  }
+}
+
+</script>

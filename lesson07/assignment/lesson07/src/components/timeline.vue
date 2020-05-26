@@ -1,52 +1,42 @@
 <template>
-    <div class="container-fluid">
+    <div class="layout container-fluid">
 
       <h1 class="display-4 mt-3">Timeline</h1>
 
-      <div>
-        <div class="row bg-info text-white lead">
+
+        <div class="align row bg-info text-white lead">
           <div class="col-xs-1 col-sm-1 col-md-1 col-lg-2">
             Years
           </div>
           <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
-            Genre Name
+            Genre
           </div>
           <div class="col-xs-1 col-sm-1 col-md col-lg">
             Description
           </div>
         </div>
-      </div>
 
-      <div class="row pt-2 pb-2 bg-light">
-        <div v-for="era in eras" :key="era.id" class="col-xs-1 col-sm-1 col-md-1 col-lg-2">
-          {{ eras.year }}
-        </div>
-        <div v-for="era in eras" :key="era.id" class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
-          {{ eras.genre }}
-        </div>
-        <div v-for="era in eras" :key="era.id" class="col-xs-1 col-sm-1 col-md col-lg">
-          {{ eras.descrip }}
-        </div>
-      </div>
+        <div class=" align row"  v-for="era in eras" :key="era.id" >
+          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-2">
+            {{ era.year }}
+          </div>
 
-      <!-- <div id="test">
-        <li v-for="item in items" :key="item.message">
-          {{ item.message }}
-        </li>
-      </div> -->
-      <!-- <ul>
-        <li v-for="person in persons" :key="person.id">
-          {{person.name}}
-          {{person.age}}
-          {{person.color}}
-        </li>
-      </ul> -->
+          <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+            {{ era.genre }}
+          </div>
+
+          <div class="col-xs-1 col-sm-1 col-md col-lg">
+            {{ era.descrip }}
+          </div>
+        </div>
+
     </div>
 </template>
 
 <script>
 export default {
   name: 'timeline',
+  props: ['era'],
   data () {
     return {
       eras: [
@@ -59,3 +49,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.align {
+  text-align: left;
+}
+
+.layout {
+  margin: 2rem;
+}
+</style>
