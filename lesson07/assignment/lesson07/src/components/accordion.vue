@@ -43,4 +43,29 @@ export default {
 .artistLink {
   color: rgb(253, 192, 47);
 }
+
+.message {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.message-header {
+  cursor: pointer;
+}
+
+.message-body   {
+  padding: 0;
+  max-height: 10em;
+  overflow: hidden;
+  transition: 0.3s ease all;
+}
+
+.is-closed .message-body {
+  max-height: 0;
+}
+
+.message-content {
+  padding: 20px;
+}
 </style>
