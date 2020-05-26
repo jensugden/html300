@@ -6,7 +6,7 @@
         <hr class="my-4">
         <p >I'll be sure to note that in my log. Smooth as an android's bottom, eh, Data? When has justice ever been as simple as a rule book? This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.</p>
         <p class="lead">
-          <a class="btn btn-primary btn-lg" href="artists.html" role="button">Find Artists</a>
+          <a class="btn btn-warning btn-lg" href="artists.html" role="button">Find Artists</a>
         </p>
       </div>
     </div>
