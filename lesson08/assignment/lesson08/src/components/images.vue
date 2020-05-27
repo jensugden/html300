@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import toggleMixin from '../mixins/toggleMixin'
 
 export default {
   props: {
@@ -17,7 +18,8 @@ export default {
       type: Array,
       required: true,
     }
-  }
+  },
+  mixins: [toggleMixin]
 }
 </script>
 
