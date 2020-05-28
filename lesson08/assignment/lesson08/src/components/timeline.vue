@@ -1,7 +1,7 @@
 <template>
     <div class="layout container-fluid">
 
-      <h1 class="display-4 mt-3">Timeline</h1>
+      <h1 class="display-4 mt-3">{{ message | to-uppercase }}</h1>
 
 
         <div class="align row bg-info text-white lead">
@@ -34,6 +34,8 @@
 </template>
 
 <script>
+import uppercaseMixin from '../mixins/uppercaseMixin'
+
 export default {
   name: 'timeline',
   props: ['era'],
@@ -44,9 +46,11 @@ export default {
         {year: '1527-1580', genre: 'Mannerism', descrip: 'Stylized features, exaggerated details, decorative elements'},
         {year: '1400-1600', genre: 'Renaissance', descrip: 'Natural elements, individualism, realism, attention-to-detail, precision of human anatomy'},
         {year: '1527-1580', genre: 'Mannerism', descrip: 'Stylized features, exaggerated details, decorative elements'}
-      ]
+      ],
+      message: 'Timeline'
     }
-  }
+  },
+  mixins: [uppercaseMixin]
 }
 </script>
 

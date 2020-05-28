@@ -1,8 +1,6 @@
 <template>
-  <div id="app">
-
-    <header/>
-    <!-- <div id="nav">
+  <div>
+    <div id="nav">
       <nav class="navbar navbar-expand-lg navbar-light bg-info p-5">
         <h1 class="name-brand">ArtSearch</h1>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,50 +16,14 @@
           </div>
         </div>
       </nav>
-    </div> -->
-    <router-view></router-view>
-
-    <!-- <landing/> -->
-
-    <footer class="bg-info mt-2 p-5">
-      <h6>Thank you for visiting ArtSearch</h6>
-      <p class="small">Powered by Jenny Sugden</p>
-    </footer>
-
+    </div>
   </div>
 </template>
 
 <script>
-import topHead from './components/top-head.vue'
-
 export default {
-  name: 'app',
-  components: {
-    topHead
-  }
+  
 }
+
 
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>

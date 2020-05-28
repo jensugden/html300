@@ -1,9 +1,15 @@
 <template>
     <div>
-      <h1 class="display-4 mt-3">Gallery</h1>
+      <h1 class="display-4 mt-3" >{{ message | to-uppercase }}</h1>
 
-      <div class="flex" >
-        <img class="img-thumbnail img-fluid" v-for="pic in pics" :key="pic.id" :src="pic.url" :alt="pic.alt"/>
+      <div class="flex " >
+        <img class="color apply img-thumbnail img-fluid"
+          v-for="pic in pics"
+          :key="pic.id"
+          :src="pic.url"
+          :alt="pic.alt"
+          :class="{ blue: active }"
+          v-on:click="active = !active" :aria-pressed="active ? 'true' : 'false'"/>
       </div>
 
     </div>
@@ -11,6 +17,7 @@
 
 <script>
 import toggleMixin from '../mixins/toggleMixin'
+import uppercaseMixin from '../mixins/uppercaseMixin'
 
 export default {
   props: {
@@ -19,7 +26,12 @@ export default {
       required: true,
     }
   },
-  mixins: [toggleMixin]
+  data(){
+    return {
+      message: 'Gallery'
+    }
+  },
+  mixins: [toggleMixin, uppercaseMixin]
 }
 </script>
 
@@ -31,6 +43,19 @@ export default {
 }
 
 img {
+  height: 300px;
   margin: .25rem;
+}
+
+.gray {
+  border-color: gray;
+}
+
+.blue {
+  border-color: blue;
+}
+
+.apply {
+  border: 2px solid gray;
 }
 </style>

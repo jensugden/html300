@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1 class="display-4 mt-3">Artists</h1>
+      <h1 class="display-4 mt-3">{{ message | to-uppercase }}</h1>
 
       <div v-for="panel in panels" :key="panel.id" class="accordion" id="artistAccordion">
         <div class="card">
@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import uppercaseMixin from '../mixins/uppercaseMixin'
+
 export default {
   name: 'accordion',
   props: ['panel'],
@@ -33,9 +35,11 @@ export default {
         {genre: 'Mannerism', info: 'Just say anything, George, say what ever is natural, the first thing that comes to your mind. Take that you mutated son-of-a-bitch. My pine, why you. You space bastard, you killed a pine. You do? Yeah, its 8:00. Hey, McFly, I thought I told you never to come in here. Well its gonna cost you. How much money you got on you?'},
         {genre: 'Baroque', info: 'Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.'},
         {genre: 'Rococo', info: 'Well, the way they make shows is, they make one show. That show is called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they are going to make more shows. Some pilots get picked and become television programs. Some do not, become nothing. She starred in one of the ones that became nothing.'},
-      ]
+      ],
+      message: 'Artists'
     }
-  }
+  },
+  mixins: [uppercaseMixin]
 }
 </script>
 
