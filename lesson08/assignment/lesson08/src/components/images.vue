@@ -48,14 +48,14 @@ img {
 }
 
 .gray {
-  border-color: gray;
+  border: 2px solid gray;
 }
 
 .blue {
-  border-color: blue;
+  border: 2px solid blue;
 }
 
-.color {
+/* .color {
   border: 2px solid gray;
-}
+} */
 </style>
