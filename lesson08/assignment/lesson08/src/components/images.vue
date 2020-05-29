@@ -8,8 +8,8 @@
           :key="pic.id"
           :src="pic.url"
           :alt="pic.alt"
-          :class="{ blue: active }"
-          v-on:click="active = !active" :aria-pressed="active ? 'true' : 'false'"/>
+          :class="[isActive ? 'gray' : 'blue']"
+          @click="toggleClass()"/>
       </div>
 
     </div>
@@ -55,7 +55,7 @@ img {
   border-color: blue;
 }
 
-.apply {
+.color {
   border: 2px solid gray;
 }
 </style>

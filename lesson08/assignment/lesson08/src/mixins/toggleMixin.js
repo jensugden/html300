@@ -1,12 +1,12 @@
 export default {
   data() {
     return {
-      active: true
+      isActive: true
     }
   },
-  // methods: {
-  //   toggleShowHide (i) {
-  //     this.isActive = i;
-  //   }
-  // }
+  methods: {
+    toggleClass: function() {
+      this.isActive = !this.isActive;
+    }
+  }
 }

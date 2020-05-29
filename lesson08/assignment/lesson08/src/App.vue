@@ -1,43 +1,24 @@
 <template>
   <div id="app">
 
-    <header/>
-    <!-- <div id="nav">
-      <nav class="navbar navbar-expand-lg navbar-light bg-info p-5">
-        <h1 class="name-brand">ArtSearch</h1>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <router-link class="nav-item nav-link" to="/">Home <span class="sr-only">(current)</span></router-link>
-            <router-link class="nav-item nav-link" to="/About">About</router-link>
-            <router-link class="nav-item nav-link" to="/timeline">Timeline</router-link>
-            <router-link class="nav-item nav-link" to="/artists">Artists</router-link>
-            <router-link class="nav-item nav-link" to="/gallery">Gallery</router-link>
-          </div>
-        </div>
-      </nav>
-    </div> -->
+    <topHead></topHead>
+
     <router-view></router-view>
 
-    <!-- <landing/> -->
-
-    <footer class="bg-info mt-2 p-5">
-      <h6>Thank you for visiting ArtSearch</h6>
-      <p class="small">Powered by Jenny Sugden</p>
-    </footer>
+    <bottom></bottom>
 
   </div>
 </template>
 
 <script>
-import topHead from './components/top-head.vue'
+import topHead from './components/topHead.vue'
+import bottom from './components/bottom.vue'
 
 export default {
   name: 'app',
   components: {
-    topHead
+    topHead,
+    bottom
   }
 }
 
