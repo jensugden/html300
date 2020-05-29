@@ -7,7 +7,38 @@ html {
 *:before {
     box-sizing: inherit;
 }
-
+.test {
+  practice;
+}
 .main {
     padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  height: 8rem;
+  color: white;
+}
+
+.gallery {
+  display: flex;
+  background-color: rgba(36, 162, 183, 0.25);
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.name-brand {
+  color: white;
+}
+
+.small {
+  font-size: .5em;
+}
+
+.artistLink {
+  color: rgb(253, 192, 47);
 }
