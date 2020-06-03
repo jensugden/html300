@@ -20,7 +20,7 @@
   export default {
     name: 'searchCard',
     props: {
-      prints: Array
+      object: Array
     }
   }
 </script>

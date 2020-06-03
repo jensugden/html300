@@ -10,11 +10,13 @@
       </div>
     </search>
 
-    <div class="container" v-if="prints">
-    <div class="container">
-      <searchCard v-for="print of prints" :key="print.id"/>
+    <div>
+      <p v-for="record in records" :key="record.id" v-text="record.century"></p>
     </div>
-  </div>
+    <!-- <div v-for="record of records" :key="record.id">{{ record.title }}</div> -->
+    <!-- <div class="container"> -->
+      <!-- <searchCard v-for="object of objects" :key="object.id"/> -->
+    <!-- </div> -->
   </div>
 </template>
 
@@ -28,27 +30,34 @@ export default {
   components: {
    search, searchCard
   },
-
+  
   data() {
     return {
-      // prints: [],
-      loading: true,
-      prints: null,
-      errored: false
+    records: [],
     }
   },
+  // data() {
+  //   return {
+  //     records: [],
+  //     loading: true,
+  //     objects: null,
+  //     errored: false
+  //   }
+  // },
 
-  created() {
-    axios.get('https://api.harvardartmuseums.org/classification/26?apikey=506c1dd0-a5c3-11ea-bd1f-99670da43555')
+  mounted () {
+    axios.get('https://api.harvardartmuseums.org/object/?apikey=506c1dd0-a5c3-11ea-bd1f-99670da43555')
     // axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects')
     // axios.get('https://trefle.io/api/plants?token=cDBjQkt6cG9KZXQ0ay9tRU44clBUUT09')
-    .then(response => (this.prints = response.data))
+    .then(response => (this.records = response.data))
     .catch(error => {
       console.log(error)
       this.errored = true
     })
     .finally(() => this.loading = false)
-  }
+  },
+
+
 }
 </script>
 
