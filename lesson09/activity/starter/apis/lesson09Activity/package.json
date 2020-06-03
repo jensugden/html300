@@ -1,5 +1,5 @@
 {
-  "name": "lesson09",
+  "name": "lesson09activyt",
   "version": "1.0.0",
   "description": "Nuxt.js project",
   "author": "Jenny Sugden <jensugden@gmail.com>",
@@ -14,20 +14,13 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "bootstrap": "^4.5.0",
-    "bootstrap-vue": "^2.15.0",
-    "nuxt": "^2.0.0",
-    "vue": "^2.6.11"
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^4.19.1",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.1.1",
-    "eslint-plugin-vue": "^4.0.0",
-    "jquery": "^3.5.1",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2",
-    "webpack": "^4.43.0"
+    "eslint-plugin-vue": "^4.0.0"
   }
 }

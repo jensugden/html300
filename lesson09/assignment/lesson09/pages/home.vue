@@ -10,10 +10,11 @@
       </div>
     </search>
 
-    <div class="container" v-if="countries">
-      <card v-for="country of countries" :key="country.id" :country="country"/>
+    <div class="container" v-if="prints">
+    <div class="container">
+      <searchCard v-for="print of prints" :key="print.id"/>
     </div>
-
+  </div>
   </div>
 </template>
 
@@ -27,20 +28,21 @@ export default {
   components: {
    search, searchCard
   },
+
   data() {
     return {
+      // prints: [],
       loading: true,
-      countries: null,
+      prints: null,
       errored: false
     }
   },
-  mounted (){
-    axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/')
-    .then(response => {
-      (this.countries = response.data)
-      console.log(response.data)
-      debugger
-    })
+
+  created() {
+    axios.get('https://api.harvardartmuseums.org/classification/26?apikey=506c1dd0-a5c3-11ea-bd1f-99670da43555')
+    // axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects')
+    // axios.get('https://trefle.io/api/plants?token=cDBjQkt6cG9KZXQ0ay9tRU44clBUUT09')
+    .then(response => (this.prints = response.data))
     .catch(error => {
       console.log(error)
       this.errored = true
@@ -50,10 +52,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 img {
   width: 100px;
 }
+
 .card {
   margin: 1rem;
   border: 1px solid #000;

@@ -2,14 +2,12 @@
     <div>
       <h1 class="display-4 mt-3" >{{ message | to-uppercase }}</h1>
 
-      <div class="flex " >
+      <div class="flex" >
         <img class="color apply img-thumbnail img-fluid"
           v-for="pic in pics"
           :key="pic.id"
           :src="pic.url"
-          :alt="pic.alt"
-          :class="[isActive ? 'gray' : 'blue']"
-          @click="toggleClass()"/>
+          :alt="pic.alt"/>
       </div>
 
     </div>
